@@ -1,6 +1,8 @@
+import time
 import json
 import re
 from datetime import datetime
+start_time = time.time()
 
 # Function to transform values based on type information
 def transform_value(value):
@@ -131,3 +133,6 @@ output = json_transformer(input_data)
 
 # Print the transformed output to stdout
 print(json.dumps(output, indent=2))
+end_time = time.time()
+execution_time = end_time - start_time
+print(f"\nThe program processes the input in approximately {execution_time:.4f} seconds.")
